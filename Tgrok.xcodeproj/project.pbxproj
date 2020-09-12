@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FE2F9AFF4E22A852606A755 /* Pods_Tgrok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BC614C2E11D5A7457ABF7CE /* Pods_Tgrok.framework */; };
 		404E9D54250CF8C0005354BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D53250CF8C0005354BD /* AppDelegate.swift */; };
 		404E9D56250CF8C0005354BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D55250CF8C0005354BD /* SceneDelegate.swift */; };
 		404E9D58250CF8C0005354BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D57250CF8C0005354BD /* ViewController.swift */; };
@@ -15,6 +16,8 @@
 		404E9D60250CF8C2005354BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404E9D5E250CF8C2005354BD /* LaunchScreen.storyboard */; };
 		404E9D6B250CF8C2005354BD /* TgrokTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D6A250CF8C2005354BD /* TgrokTests.swift */; };
 		404E9D76250CF8C2005354BD /* TgrokUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D75250CF8C2005354BD /* TgrokUITests.swift */; };
+		8B5600648BD08E52F3A3AB1B /* Pods_Tgrok_TgrokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2797B23C1549220AAB2DDC27 /* Pods_Tgrok_TgrokUITests.framework */; };
+		9D24236E138B14C696DCCA20 /* Pods_TgrokTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EB25411D23D4F80CCD3E4E /* Pods_TgrokTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2797B23C1549220AAB2DDC27 /* Pods_Tgrok_TgrokUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tgrok_TgrokUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		375AA444BCF4BA9BDBB355DE /* Pods-Tgrok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok.release.xcconfig"; path = "Target Support Files/Pods-Tgrok/Pods-Tgrok.release.xcconfig"; sourceTree = "<group>"; };
+		3BC614C2E11D5A7457ABF7CE /* Pods_Tgrok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tgrok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		404E9D50250CF8C0005354BD /* Tgrok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tgrok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		404E9D53250CF8C0005354BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		404E9D55250CF8C0005354BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		404E9D71250CF8C2005354BD /* TgrokUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TgrokUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		404E9D75250CF8C2005354BD /* TgrokUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TgrokUITests.swift; sourceTree = "<group>"; };
 		404E9D77250CF8C2005354BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F0B78E45997B8C2F7832694 /* Pods-Tgrok-TgrokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok-TgrokUITests.release.xcconfig"; path = "Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6EAF8CAFAEA7DA53B9AC1366 /* Pods-TgrokTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TgrokTests.debug.xcconfig"; path = "Target Support Files/Pods-TgrokTests/Pods-TgrokTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7934A24529D51D775C16384A /* Pods-Tgrok-TgrokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok-TgrokUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8C6B0ACB8F4E1831659D90CB /* Pods-TgrokTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TgrokTests.release.xcconfig"; path = "Target Support Files/Pods-TgrokTests/Pods-TgrokTests.release.xcconfig"; sourceTree = "<group>"; };
+		B9EB25411D23D4F80CCD3E4E /* Pods_TgrokTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TgrokTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB71AA7EB08197F284FDE972 /* Pods-Tgrok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok.debug.xcconfig"; path = "Target Support Files/Pods-Tgrok/Pods-Tgrok.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE2F9AFF4E22A852606A755 /* Pods_Tgrok.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D24236E138B14C696DCCA20 /* Pods_TgrokTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B5600648BD08E52F3A3AB1B /* Pods_Tgrok_TgrokUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				404E9D69250CF8C2005354BD /* TgrokTests */,
 				404E9D74250CF8C2005354BD /* TgrokUITests */,
 				404E9D51250CF8C0005354BD /* Products */,
+				4613C75B7567CFF97EA7D71B /* Pods */,
+				7E4EECE042069B74F3B85CA7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +145,29 @@
 			path = TgrokUITests;
 			sourceTree = "<group>";
 		};
+		4613C75B7567CFF97EA7D71B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB71AA7EB08197F284FDE972 /* Pods-Tgrok.debug.xcconfig */,
+				375AA444BCF4BA9BDBB355DE /* Pods-Tgrok.release.xcconfig */,
+				7934A24529D51D775C16384A /* Pods-Tgrok-TgrokUITests.debug.xcconfig */,
+				4F0B78E45997B8C2F7832694 /* Pods-Tgrok-TgrokUITests.release.xcconfig */,
+				6EAF8CAFAEA7DA53B9AC1366 /* Pods-TgrokTests.debug.xcconfig */,
+				8C6B0ACB8F4E1831659D90CB /* Pods-TgrokTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7E4EECE042069B74F3B85CA7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BC614C2E11D5A7457ABF7CE /* Pods_Tgrok.framework */,
+				2797B23C1549220AAB2DDC27 /* Pods_Tgrok_TgrokUITests.framework */,
+				B9EB25411D23D4F80CCD3E4E /* Pods_TgrokTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +175,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 404E9D7A250CF8C2005354BD /* Build configuration list for PBXNativeTarget "Tgrok" */;
 			buildPhases = (
+				4DE7EAD43920FE33E0AD3475 /* [CP] Check Pods Manifest.lock */,
 				404E9D4C250CF8C0005354BD /* Sources */,
 				404E9D4D250CF8C0005354BD /* Frameworks */,
 				404E9D4E250CF8C0005354BD /* Resources */,
+				D0F3ED1EBBE261C1C852EB5B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 404E9D7D250CF8C2005354BD /* Build configuration list for PBXNativeTarget "TgrokTests" */;
 			buildPhases = (
+				C2B0B1F7AFDC49ABED81D027 /* [CP] Check Pods Manifest.lock */,
 				404E9D62250CF8C2005354BD /* Sources */,
 				404E9D63250CF8C2005354BD /* Frameworks */,
 				404E9D64250CF8C2005354BD /* Resources */,
@@ -170,9 +213,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 404E9D80250CF8C2005354BD /* Build configuration list for PBXNativeTarget "TgrokUITests" */;
 			buildPhases = (
+				92A7734702B91BC23D6FF0E2 /* [CP] Check Pods Manifest.lock */,
 				404E9D6D250CF8C2005354BD /* Sources */,
 				404E9D6E250CF8C2005354BD /* Frameworks */,
 				404E9D6F250CF8C2005354BD /* Resources */,
+				7546EA6473CB9E37E496DD2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -253,6 +298,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DE7EAD43920FE33E0AD3475 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tgrok-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7546EA6473CB9E37E496DD2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		92A7734702B91BC23D6FF0E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tgrok-TgrokUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2B0B1F7AFDC49ABED81D027 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TgrokTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D0F3ED1EBBE261C1C852EB5B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tgrok/Pods-Tgrok-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tgrok/Pods-Tgrok-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tgrok/Pods-Tgrok-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		404E9D4C250CF8C0005354BD /* Sources */ = {
@@ -432,6 +580,7 @@
 		};
 		404E9D7B250CF8C2005354BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB71AA7EB08197F284FDE972 /* Pods-Tgrok.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +599,7 @@
 		};
 		404E9D7C250CF8C2005354BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 375AA444BCF4BA9BDBB355DE /* Pods-Tgrok.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +618,7 @@
 		};
 		404E9D7E250CF8C2005354BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EAF8CAFAEA7DA53B9AC1366 /* Pods-TgrokTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +641,7 @@
 		};
 		404E9D7F250CF8C2005354BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C6B0ACB8F4E1831659D90CB /* Pods-TgrokTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +664,7 @@
 		};
 		404E9D81250CF8C2005354BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7934A24529D51D775C16384A /* Pods-Tgrok-TgrokUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +685,7 @@
 		};
 		404E9D82250CF8C2005354BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F0B78E45997B8C2F7832694 /* Pods-Tgrok-TgrokUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
