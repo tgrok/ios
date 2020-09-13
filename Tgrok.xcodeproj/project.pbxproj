@@ -23,6 +23,19 @@
 		404E9D93250D960A005354BD /* TgrokService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D92250D960A005354BD /* TgrokService.swift */; };
 		404E9D95250D9619005354BD /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D94250D9619005354BD /* ConfigService.swift */; };
 		404E9D97250D977C005354BD /* PageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D96250D977C005354BD /* PageService.swift */; };
+		404E9D99250DA612005354BD /* BaseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D98250DA612005354BD /* BaseClient.swift */; };
+		404E9D9B250DA827005354BD /* TgrokClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D9A250DA827005354BD /* TgrokClient.swift */; };
+		404E9D9D250DAABC005354BD /* LocalClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D9C250DAABC005354BD /* LocalClient.swift */; };
+		404E9DA1250DAB1D005354BD /* ProxyClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DA0250DAB1D005354BD /* ProxyClient.swift */; };
+		404E9DA3250DAB33005354BD /* ControlClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DA2250DAB33005354BD /* ControlClient.swift */; };
+		404E9DA5250DC314005354BD /* Tgrok.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DA4250DC314005354BD /* Tgrok.swift */; };
+		404E9DA7250DCA8A005354BD /* global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DA6250DCA8A005354BD /* global.swift */; };
+		404E9DAA250DCD6F005354BD /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DA9250DCD6F005354BD /* StringExtensions.swift */; };
+		404E9DAC250E0CD2005354BD /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DAB250E0CD2005354BD /* IntExtensions.swift */; };
+		404E9DB0250E2146005354BD /* JSONExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DAF250E2145005354BD /* JSONExtensions.swift */; };
+		404E9DB2250E3829005354BD /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DB1250E3829005354BD /* DataExtensions.swift */; };
+		4095521F250E3CAD008D1287 /* Notification+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095521E250E3CAD008D1287 /* Notification+Names.swift */; };
+		40955221250E4443008D1287 /* Tunnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40955220250E4443008D1287 /* Tunnel.swift */; };
 		8B5600648BD08E52F3A3AB1B /* Pods_Tgrok_TgrokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2797B23C1549220AAB2DDC27 /* Pods_Tgrok_TgrokUITests.framework */; };
 		9D24236E138B14C696DCCA20 /* Pods_TgrokTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EB25411D23D4F80CCD3E4E /* Pods_TgrokTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +82,19 @@
 		404E9D92250D960A005354BD /* TgrokService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TgrokService.swift; sourceTree = "<group>"; };
 		404E9D94250D9619005354BD /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
 		404E9D96250D977C005354BD /* PageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageService.swift; sourceTree = "<group>"; };
+		404E9D98250DA612005354BD /* BaseClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseClient.swift; sourceTree = "<group>"; };
+		404E9D9A250DA827005354BD /* TgrokClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TgrokClient.swift; sourceTree = "<group>"; };
+		404E9D9C250DAABC005354BD /* LocalClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalClient.swift; sourceTree = "<group>"; };
+		404E9DA0250DAB1D005354BD /* ProxyClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProxyClient.swift; sourceTree = "<group>"; };
+		404E9DA2250DAB33005354BD /* ControlClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlClient.swift; sourceTree = "<group>"; };
+		404E9DA4250DC314005354BD /* Tgrok.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tgrok.swift; sourceTree = "<group>"; };
+		404E9DA6250DCA8A005354BD /* global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = global.swift; sourceTree = "<group>"; };
+		404E9DA9250DCD6F005354BD /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		404E9DAB250E0CD2005354BD /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
+		404E9DAF250E2145005354BD /* JSONExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONExtensions.swift; sourceTree = "<group>"; };
+		404E9DB1250E3829005354BD /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		4095521E250E3CAD008D1287 /* Notification+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Names.swift"; sourceTree = "<group>"; };
+		40955220250E4443008D1287 /* Tunnel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tunnel.swift; sourceTree = "<group>"; };
 		4F0B78E45997B8C2F7832694 /* Pods-Tgrok-TgrokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok-TgrokUITests.release.xcconfig"; path = "Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6EAF8CAFAEA7DA53B9AC1366 /* Pods-TgrokTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TgrokTests.debug.xcconfig"; path = "Target Support Files/Pods-TgrokTests/Pods-TgrokTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7934A24529D51D775C16384A /* Pods-Tgrok-TgrokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok-TgrokUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +157,7 @@
 		404E9D52250CF8C0005354BD /* Tgrok */ = {
 			isa = PBXGroup;
 			children = (
+				404E9DA8250DCD47005354BD /* ext */,
 				404E9D90250D950F005354BD /* tgrok */,
 				404E9D85250D030A005354BD /* bridge */,
 				404E9D53250CF8C0005354BD /* AppDelegate.swift */,
@@ -140,6 +167,7 @@
 				404E9D5C250CF8C2005354BD /* Assets.xcassets */,
 				404E9D5E250CF8C2005354BD /* LaunchScreen.storyboard */,
 				404E9D61250CF8C2005354BD /* Info.plist */,
+				404E9DA6250DCA8A005354BD /* global.swift */,
 			);
 			path = Tgrok;
 			sourceTree = "<group>";
@@ -176,6 +204,13 @@
 		404E9D90250D950F005354BD /* tgrok */ = {
 			isa = PBXGroup;
 			children = (
+				404E9D98250DA612005354BD /* BaseClient.swift */,
+				404E9D9A250DA827005354BD /* TgrokClient.swift */,
+				404E9D9C250DAABC005354BD /* LocalClient.swift */,
+				404E9DA0250DAB1D005354BD /* ProxyClient.swift */,
+				404E9DA2250DAB33005354BD /* ControlClient.swift */,
+				404E9DA4250DC314005354BD /* Tgrok.swift */,
+				40955220250E4443008D1287 /* Tunnel.swift */,
 			);
 			path = tgrok;
 			sourceTree = "<group>";
@@ -188,6 +223,18 @@
 				404E9D92250D960A005354BD /* TgrokService.swift */,
 			);
 			path = service;
+			sourceTree = "<group>";
+		};
+		404E9DA8250DCD47005354BD /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				404E9DAF250E2145005354BD /* JSONExtensions.swift */,
+				404E9DA9250DCD6F005354BD /* StringExtensions.swift */,
+				404E9DAB250E0CD2005354BD /* IntExtensions.swift */,
+				404E9DB1250E3829005354BD /* DataExtensions.swift */,
+				4095521E250E3CAD008D1287 /* Notification+Names.swift */,
+			);
+			path = ext;
 			sourceTree = "<group>";
 		};
 		4613C75B7567CFF97EA7D71B /* Pods */ = {
@@ -454,14 +501,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				404E9D93250D960A005354BD /* TgrokService.swift in Sources */,
+				404E9D99250DA612005354BD /* BaseClient.swift in Sources */,
+				404E9D9B250DA827005354BD /* TgrokClient.swift in Sources */,
 				404E9D8B250D0350005354BD /* JsService.swift in Sources */,
+				404E9DA5250DC314005354BD /* Tgrok.swift in Sources */,
 				404E9D8C250D0350005354BD /* JsBridge.swift in Sources */,
+				404E9DA1250DAB1D005354BD /* ProxyClient.swift in Sources */,
+				40955221250E4443008D1287 /* Tunnel.swift in Sources */,
 				404E9D58250CF8C0005354BD /* ViewController.swift in Sources */,
+				404E9DB0250E2146005354BD /* JSONExtensions.swift in Sources */,
+				404E9DA7250DCA8A005354BD /* global.swift in Sources */,
+				4095521F250E3CAD008D1287 /* Notification+Names.swift in Sources */,
+				404E9DAC250E0CD2005354BD /* IntExtensions.swift in Sources */,
+				404E9D9D250DAABC005354BD /* LocalClient.swift in Sources */,
 				404E9D54250CF8C0005354BD /* AppDelegate.swift in Sources */,
+				404E9DB2250E3829005354BD /* DataExtensions.swift in Sources */,
 				404E9D95250D9619005354BD /* ConfigService.swift in Sources */,
 				404E9D56250CF8C0005354BD /* SceneDelegate.swift in Sources */,
 				404E9D8D250D0350005354BD /* JsRequest.swift in Sources */,
+				404E9DA3250DAB33005354BD /* ControlClient.swift in Sources */,
 				404E9D97250D977C005354BD /* PageService.swift in Sources */,
+				404E9DAA250DCD6F005354BD /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
