@@ -16,6 +16,13 @@
 		404E9D60250CF8C2005354BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404E9D5E250CF8C2005354BD /* LaunchScreen.storyboard */; };
 		404E9D6B250CF8C2005354BD /* TgrokTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D6A250CF8C2005354BD /* TgrokTests.swift */; };
 		404E9D76250CF8C2005354BD /* TgrokUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D75250CF8C2005354BD /* TgrokUITests.swift */; };
+		404E9D8B250D0350005354BD /* JsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D87250D0350005354BD /* JsService.swift */; };
+		404E9D8C250D0350005354BD /* JsBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D88250D0350005354BD /* JsBridge.swift */; };
+		404E9D8D250D0350005354BD /* JsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D89250D0350005354BD /* JsRequest.swift */; };
+		404E9D8F250D8BD2005354BD /* www in Resources */ = {isa = PBXBuildFile; fileRef = 404E9D8E250D8BD2005354BD /* www */; };
+		404E9D93250D960A005354BD /* TgrokService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D92250D960A005354BD /* TgrokService.swift */; };
+		404E9D95250D9619005354BD /* ConfigService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D94250D9619005354BD /* ConfigService.swift */; };
+		404E9D97250D977C005354BD /* PageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9D96250D977C005354BD /* PageService.swift */; };
 		8B5600648BD08E52F3A3AB1B /* Pods_Tgrok_TgrokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2797B23C1549220AAB2DDC27 /* Pods_Tgrok_TgrokUITests.framework */; };
 		9D24236E138B14C696DCCA20 /* Pods_TgrokTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EB25411D23D4F80CCD3E4E /* Pods_TgrokTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +62,13 @@
 		404E9D71250CF8C2005354BD /* TgrokUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TgrokUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		404E9D75250CF8C2005354BD /* TgrokUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TgrokUITests.swift; sourceTree = "<group>"; };
 		404E9D77250CF8C2005354BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		404E9D87250D0350005354BD /* JsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsService.swift; sourceTree = "<group>"; };
+		404E9D88250D0350005354BD /* JsBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsBridge.swift; sourceTree = "<group>"; };
+		404E9D89250D0350005354BD /* JsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsRequest.swift; sourceTree = "<group>"; };
+		404E9D8E250D8BD2005354BD /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = "<group>"; };
+		404E9D92250D960A005354BD /* TgrokService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TgrokService.swift; sourceTree = "<group>"; };
+		404E9D94250D9619005354BD /* ConfigService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigService.swift; sourceTree = "<group>"; };
+		404E9D96250D977C005354BD /* PageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageService.swift; sourceTree = "<group>"; };
 		4F0B78E45997B8C2F7832694 /* Pods-Tgrok-TgrokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok-TgrokUITests.release.xcconfig"; path = "Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6EAF8CAFAEA7DA53B9AC1366 /* Pods-TgrokTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TgrokTests.debug.xcconfig"; path = "Target Support Files/Pods-TgrokTests/Pods-TgrokTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7934A24529D51D775C16384A /* Pods-Tgrok-TgrokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok-TgrokUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +108,7 @@
 		404E9D47250CF8C0005354BD = {
 			isa = PBXGroup;
 			children = (
+				404E9D8E250D8BD2005354BD /* www */,
 				404E9D52250CF8C0005354BD /* Tgrok */,
 				404E9D69250CF8C2005354BD /* TgrokTests */,
 				404E9D74250CF8C2005354BD /* TgrokUITests */,
@@ -116,6 +131,8 @@
 		404E9D52250CF8C0005354BD /* Tgrok */ = {
 			isa = PBXGroup;
 			children = (
+				404E9D90250D950F005354BD /* tgrok */,
+				404E9D85250D030A005354BD /* bridge */,
 				404E9D53250CF8C0005354BD /* AppDelegate.swift */,
 				404E9D55250CF8C0005354BD /* SceneDelegate.swift */,
 				404E9D57250CF8C0005354BD /* ViewController.swift */,
@@ -143,6 +160,34 @@
 				404E9D77250CF8C2005354BD /* Info.plist */,
 			);
 			path = TgrokUITests;
+			sourceTree = "<group>";
+		};
+		404E9D85250D030A005354BD /* bridge */ = {
+			isa = PBXGroup;
+			children = (
+				404E9D91250D9517005354BD /* service */,
+				404E9D88250D0350005354BD /* JsBridge.swift */,
+				404E9D89250D0350005354BD /* JsRequest.swift */,
+				404E9D87250D0350005354BD /* JsService.swift */,
+			);
+			path = bridge;
+			sourceTree = "<group>";
+		};
+		404E9D90250D950F005354BD /* tgrok */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tgrok;
+			sourceTree = "<group>";
+		};
+		404E9D91250D9517005354BD /* service */ = {
+			isa = PBXGroup;
+			children = (
+				404E9D94250D9619005354BD /* ConfigService.swift */,
+				404E9D96250D977C005354BD /* PageService.swift */,
+				404E9D92250D960A005354BD /* TgrokService.swift */,
+			);
+			path = service;
 			sourceTree = "<group>";
 		};
 		4613C75B7567CFF97EA7D71B /* Pods */ = {
@@ -277,6 +322,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				404E9D8F250D8BD2005354BD /* www in Resources */,
 				404E9D60250CF8C2005354BD /* LaunchScreen.storyboard in Resources */,
 				404E9D5D250CF8C2005354BD /* Assets.xcassets in Resources */,
 				404E9D5B250CF8C0005354BD /* Main.storyboard in Resources */,
@@ -407,9 +453,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				404E9D93250D960A005354BD /* TgrokService.swift in Sources */,
+				404E9D8B250D0350005354BD /* JsService.swift in Sources */,
+				404E9D8C250D0350005354BD /* JsBridge.swift in Sources */,
 				404E9D58250CF8C0005354BD /* ViewController.swift in Sources */,
 				404E9D54250CF8C0005354BD /* AppDelegate.swift in Sources */,
+				404E9D95250D9619005354BD /* ConfigService.swift in Sources */,
 				404E9D56250CF8C0005354BD /* SceneDelegate.swift in Sources */,
+				404E9D8D250D0350005354BD /* JsRequest.swift in Sources */,
+				404E9D97250D977C005354BD /* PageService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
