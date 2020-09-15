@@ -34,6 +34,7 @@
 		404E9DAC250E0CD2005354BD /* IntExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DAB250E0CD2005354BD /* IntExtensions.swift */; };
 		404E9DB0250E2146005354BD /* JSONExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DAF250E2145005354BD /* JSONExtensions.swift */; };
 		404E9DB2250E3829005354BD /* DataExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 404E9DB1250E3829005354BD /* DataExtensions.swift */; };
+		4081B952250EE23E0096F9FF /* NWConnectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B951250EE23E0096F9FF /* NWConnectionExtensions.swift */; };
 		4095521F250E3CAD008D1287 /* Notification+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095521E250E3CAD008D1287 /* Notification+Names.swift */; };
 		40955221250E4443008D1287 /* Tunnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40955220250E4443008D1287 /* Tunnel.swift */; };
 		8B5600648BD08E52F3A3AB1B /* Pods_Tgrok_TgrokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2797B23C1549220AAB2DDC27 /* Pods_Tgrok_TgrokUITests.framework */; };
@@ -93,6 +94,7 @@
 		404E9DAB250E0CD2005354BD /* IntExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensions.swift; sourceTree = "<group>"; };
 		404E9DAF250E2145005354BD /* JSONExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONExtensions.swift; sourceTree = "<group>"; };
 		404E9DB1250E3829005354BD /* DataExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensions.swift; sourceTree = "<group>"; };
+		4081B951250EE23E0096F9FF /* NWConnectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWConnectionExtensions.swift; sourceTree = "<group>"; };
 		4095521E250E3CAD008D1287 /* Notification+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Names.swift"; sourceTree = "<group>"; };
 		40955220250E4443008D1287 /* Tunnel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tunnel.swift; sourceTree = "<group>"; };
 		4F0B78E45997B8C2F7832694 /* Pods-Tgrok-TgrokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok-TgrokUITests.release.xcconfig"; path = "Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				404E9DAB250E0CD2005354BD /* IntExtensions.swift */,
 				404E9DB1250E3829005354BD /* DataExtensions.swift */,
 				4095521E250E3CAD008D1287 /* Notification+Names.swift */,
+				4081B951250EE23E0096F9FF /* NWConnectionExtensions.swift */,
 			);
 			path = ext;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				404E9D95250D9619005354BD /* ConfigService.swift in Sources */,
 				404E9D56250CF8C0005354BD /* SceneDelegate.swift in Sources */,
 				404E9D8D250D0350005354BD /* JsRequest.swift in Sources */,
+				4081B952250EE23E0096F9FF /* NWConnectionExtensions.swift in Sources */,
 				404E9DA3250DAB33005354BD /* ControlClient.swift in Sources */,
 				404E9D97250D977C005354BD /* PageService.swift in Sources */,
 				404E9DAA250DCD6F005354BD /* StringExtensions.swift in Sources */,

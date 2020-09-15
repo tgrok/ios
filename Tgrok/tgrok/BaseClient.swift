@@ -42,6 +42,9 @@ class BaseClient: NSObject {
         }
         connection.start(queue: tgrokQueue)
         connection.stateUpdateHandler = { (newState) in
+            if self.type == "prx" {
+                print(newState)
+            }
             switch newState {
             case .ready:
                 self.onReady()

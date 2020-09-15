@@ -7,12 +7,28 @@
 //
 
 import Foundation
+import Network
 
 class LocalClient: BaseClient {
     
-    override init(_ host: String, _ port: UInt16) {
-        super.init(host, port)
+    var proxy: ProxyClient?
+    var tunnel: Tunnel?
+    
+    init(_ proxy: ProxyClient, _ tunnel: Tunnel) {
+        self.proxy = proxy
+        self.tunnel = tunnel
+        super.init(tunnel.localHost, tunnel.localPort)
         self.type = "prv"
+    }
+    
+    override func start() {
+        connection = NWConnection(host: self.host, port: self.port, using: .tcp)
+        super.start()
+    }
+    
+    override func onReady() {
+        connection.pipe(proxy!.connection)
+        proxy!.connection.pipe(connection)
     }
     
 }

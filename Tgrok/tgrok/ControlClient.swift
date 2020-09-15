@@ -43,28 +43,8 @@ class ControlClient: TgrokClient {
     }
     
     func start(tunnels: [Tunnel]) {
-        connection = NWConnection(host: host, port: port, using: .tls)
         self.tunnels = tunnels
         super.start()
-    }
-    
-    func send(_ content: String) {
-        if (connection == nil || connection.state != .ready) {
-            log("socket not ready")
-            return
-        }
-        let data = content.data(using: .utf8)!
-        let headerData = data.count.toData()
-        log("send >>>> " + content)
-        connection.send(content: headerData + data, completion: .contentProcessed({ (err) in
-            if let sendError = err {
-                print(sendError)
-            }
-        }))
-    }
-    
-    func send(_ json: JSON) {
-        send(json.desc)
     }
     
     override func onReady() {
@@ -73,8 +53,7 @@ class ControlClient: TgrokClient {
         self.send(self.auth())
     }
     
-    override func onData(_ content: String) {
-        let json = JSON(parseJSON: content)
+    override func onData(_ json: JSON) {
         let payload = json["Payload"].dictionaryValue
         switch json["Type"].stringValue {
         case "AuthResp":
@@ -83,13 +62,15 @@ class ControlClient: TgrokClient {
             self.registerTunnels()
             break
         case "ReqProxy":
+            self.regProxy()
             break
         case "NewTunnel":
             NotificationCenter.default.post(name: .tgrok, object: JSON([
                 "evt": "tunnel:resp",
                 "payload": payload["Error"]?.string
             ]))
-            if let error = payload["Error"]?.string {
+            let error = payload["Error"]!.stringValue
+            if "" != error {
                 self.log("add tunnel failed : \(error)")
                 return
             }
@@ -101,8 +82,7 @@ class ControlClient: TgrokClient {
     }
     
     func regProxy() {
-        let proxy = ProxyClient(self.host.debugDescription, self.port.rawValue, ctl: self)
-        proxy.start()
+        ProxyClient(self.host.debugDescription, self.port.rawValue, ctl: self).start()
     }
     
     override func onFailed(_ error: Error) {
@@ -124,7 +104,7 @@ class ControlClient: TgrokClient {
     }
     
     func registerTunnels() {
-        print("register tunnels")
+        self.log("register tunnels")
         self.tunnels.forEach { (tunnel) in
             self.registerTunnel(tunnel)
         }
@@ -179,16 +159,17 @@ class ControlClient: TgrokClient {
     }
     
     func newTunnel(_ payload: [String: JSON]) -> Bool {
-        let reqId = payload["ReqId"]?.stringValue
+        let reqId = payload["ReqId"]!.stringValue
         for i in 0..<self.tunnels.count {
             let tunnel = self.tunnels[i]
-            if tunnel.id == reqId {
+            if tunnel.requestId == reqId {
                 tunnel.url = payload["Url"]?.stringValue
                 tunnel.status = 10
-                self.log("add tunnel OK, type: ")
+                self.log("add tunnel OK, type: \(tunnel.proto)")
                 return true
             }
         }
+        self.log("no tunnel found for \(reqId)")
         return false
     }
     

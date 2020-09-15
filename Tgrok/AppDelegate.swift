@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         DispatchQueue.main.async {
-            tgrok.start("192.168.10.1", 80)
+            tgrok.start("127.0.0.1", 8000)
         }
         
         return true

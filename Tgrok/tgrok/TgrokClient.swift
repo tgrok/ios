@@ -8,10 +8,14 @@
 
 import Foundation
 import Network
+import SwiftyJSON
 
 class TgrokClient: BaseClient {
     
+    var paused = false
+    
     override func start() {
+        connection = NWConnection(host: self.host, port: self.port, using: .tls)
         super.start()
         if (nil == connection) {
             return
@@ -35,7 +39,9 @@ class TgrokClient: BaseClient {
                 self.readBody(connection, bodyLength)
                 return
             }
-            self.readLoop()
+            if (!self.paused) {
+                self.readLoop()
+            }
         }
     }
     
@@ -49,16 +55,37 @@ class TgrokClient: BaseClient {
             if let content = content {
                 let data = String(data: content, encoding: .utf8)
                 self.log("recv <<< " + data!)
-                self.onData(data!)
+                self.onData(JSON(parseJSON: data!))
             }
             if let context = context, context.isFinal, isComplete  {
                 return
             }
-            self.readLoop()
+            
+            if (!self.paused) {
+                self.readLoop()
+            }
         }
     }
     
-    func onData(_ data: String) {
+    func onData(_ json: JSON) {
     }
     
+    func send(_ content: String) {
+        if (connection == nil || connection.state != .ready) {
+            log("socket not ready")
+            return
+        }
+        let data = content.data(using: .utf8)!
+        let headerData = data.count.toData()
+        log("send >>>> " + content)
+        connection.send(content: headerData + data, completion: .contentProcessed({ (err) in
+            if let sendError = err {
+                print(sendError)
+            }
+        }))
+    }
+    
+    func send(_ json: JSON) {
+        send(json.desc)
+    }
 }
