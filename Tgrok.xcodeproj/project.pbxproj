@@ -37,6 +37,8 @@
 		4081B952250EE23E0096F9FF /* NWConnectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4081B951250EE23E0096F9FF /* NWConnectionExtensions.swift */; };
 		4095521F250E3CAD008D1287 /* Notification+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4095521E250E3CAD008D1287 /* Notification+Names.swift */; };
 		40955221250E4443008D1287 /* Tunnel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40955220250E4443008D1287 /* Tunnel.swift */; };
+		409F5867251588A600D98ED7 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 409F5866251588A600D98ED7 /* Config.swift */; };
+		40FE0060251320D20094C7F7 /* UIDeviceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FE005F251320D20094C7F7 /* UIDeviceExtensions.swift */; };
 		8B5600648BD08E52F3A3AB1B /* Pods_Tgrok_TgrokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2797B23C1549220AAB2DDC27 /* Pods_Tgrok_TgrokUITests.framework */; };
 		9D24236E138B14C696DCCA20 /* Pods_TgrokTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EB25411D23D4F80CCD3E4E /* Pods_TgrokTests.framework */; };
 /* End PBXBuildFile section */
@@ -97,6 +99,8 @@
 		4081B951250EE23E0096F9FF /* NWConnectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NWConnectionExtensions.swift; sourceTree = "<group>"; };
 		4095521E250E3CAD008D1287 /* Notification+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Names.swift"; sourceTree = "<group>"; };
 		40955220250E4443008D1287 /* Tunnel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tunnel.swift; sourceTree = "<group>"; };
+		409F5866251588A600D98ED7 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		40FE005F251320D20094C7F7 /* UIDeviceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDeviceExtensions.swift; sourceTree = "<group>"; };
 		4F0B78E45997B8C2F7832694 /* Pods-Tgrok-TgrokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok-TgrokUITests.release.xcconfig"; path = "Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6EAF8CAFAEA7DA53B9AC1366 /* Pods-TgrokTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TgrokTests.debug.xcconfig"; path = "Target Support Files/Pods-TgrokTests/Pods-TgrokTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7934A24529D51D775C16384A /* Pods-Tgrok-TgrokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tgrok-TgrokUITests.debug.xcconfig"; path = "Target Support Files/Pods-Tgrok-TgrokUITests/Pods-Tgrok-TgrokUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +174,7 @@
 				404E9D5E250CF8C2005354BD /* LaunchScreen.storyboard */,
 				404E9D61250CF8C2005354BD /* Info.plist */,
 				404E9DA6250DCA8A005354BD /* global.swift */,
+				409F5866251588A600D98ED7 /* Config.swift */,
 			);
 			path = Tgrok;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 				404E9DB1250E3829005354BD /* DataExtensions.swift */,
 				4095521E250E3CAD008D1287 /* Notification+Names.swift */,
 				4081B951250EE23E0096F9FF /* NWConnectionExtensions.swift */,
+				40FE005F251320D20094C7F7 /* UIDeviceExtensions.swift */,
 			);
 			path = ext;
 			sourceTree = "<group>";
@@ -504,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				404E9D93250D960A005354BD /* TgrokService.swift in Sources */,
+				40FE0060251320D20094C7F7 /* UIDeviceExtensions.swift in Sources */,
 				404E9D99250DA612005354BD /* BaseClient.swift in Sources */,
 				404E9D9B250DA827005354BD /* TgrokClient.swift in Sources */,
 				404E9D8B250D0350005354BD /* JsService.swift in Sources */,
@@ -514,6 +521,7 @@
 				404E9D58250CF8C0005354BD /* ViewController.swift in Sources */,
 				404E9DB0250E2146005354BD /* JSONExtensions.swift in Sources */,
 				404E9DA7250DCA8A005354BD /* global.swift in Sources */,
+				409F5867251588A600D98ED7 /* Config.swift in Sources */,
 				4095521F250E3CAD008D1287 /* Notification+Names.swift in Sources */,
 				404E9DAC250E0CD2005354BD /* IntExtensions.swift in Sources */,
 				404E9D9D250DAABC005354BD /* LocalClient.swift in Sources */,

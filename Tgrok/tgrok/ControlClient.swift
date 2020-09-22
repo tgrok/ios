@@ -17,6 +17,8 @@ class ControlClient: TgrokClient {
     
     var tunnels: [Tunnel] = []
     
+    public weak var delegate: ControlClientDelegate?
+    
     var timer: Timer?
     let pingJson = JSON([
         "Type": "Ping",
@@ -51,6 +53,14 @@ class ControlClient: TgrokClient {
         super.onReady()
         self.status = 2;
         self.send(self.auth())
+        self.delegate?.onConnect()
+    }
+    
+    override func onStateUpdate(_ newState: NWConnection.State) {
+        self.log("newState")
+        print(newState)
+        
+        super.onStateUpdate(newState)
     }
     
     override func onData(_ json: JSON) {
@@ -58,6 +68,15 @@ class ControlClient: TgrokClient {
         switch json["Type"].stringValue {
         case "AuthResp":
             self.clientId = payload["ClientId"]!.stringValue
+            NotificationCenter.default.post(name: .tgrok, object: JSON([
+                "evt": "auth:resp",
+                "payload": payload["Error"]?.stringValue
+            ]))
+            if payload["Error"]?.stringValue != "" {
+                self.status = 6
+                return
+            }
+            self.status = 10
             self.startTimer()
             self.registerTunnels()
             break
@@ -85,32 +104,42 @@ class ControlClient: TgrokClient {
         ProxyClient(self.host.debugDescription, self.port.rawValue, ctl: self).start()
     }
     
-    override func onFailed(_ error: Error) {
-        print("onFail", error)
+    override func onError(_ error: Error?) {
+        super.onError(error)
+        if let error = error {
+            self.log("connect failed " + error.localizedDescription)
+        }
         clearTimer()
+        
+        if nil != connection {
+            connection.cancel()
+        }
+        self.connection = nil
+        
+        self.delegate?.onError()
     }
     
-    func startTimer() {
+    private func startTimer() {
         guard timer == nil else { return }
         timer = Timer.scheduledTimer(withTimeInterval: 20.0, repeats: true) { (_) in
             self.ping()
         }
     }
     
-    func clearTimer() {
+    private func clearTimer() {
         guard timer != nil else { return }
         timer?.invalidate()
         timer = nil
     }
     
-    func registerTunnels() {
+    private func registerTunnels() {
         self.log("register tunnels")
         self.tunnels.forEach { (tunnel) in
             self.registerTunnel(tunnel)
         }
     }
     
-    func registerTunnel(_ tunnel: Tunnel) {
+    private func registerTunnel(_ tunnel: Tunnel) {
         tunnel.status = 6
         self.send(tunnel.request())
     }
@@ -191,5 +220,13 @@ class ControlClient: TgrokClient {
             ]
         ])
     }
+    
+}
+
+public protocol ControlClientDelegate: class {
+    
+    func onConnect()
+    
+    func onError()
     
 }

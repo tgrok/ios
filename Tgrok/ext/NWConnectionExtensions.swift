@@ -12,38 +12,28 @@ import Network
 extension NWConnection {
     
     func pipe(_ connection: NWConnection) {
-        self.receive(minimumIncompleteLength: 1, maximumLength: 2048) { (content, context, isComplete, error) in
-            
-            var isDone = false
-            if let context = context, context.isFinal, isComplete {
-                isDone = true
-            }
+        self.receive(minimumIncompleteLength: 1, maximumLength: 4096) { (content, context, isComplete, error) in
             
             if let content = content {
-                print("==>", content.count)
-                print(String(data: content, encoding: .ascii)!)
-                print("===", content.count)
                 connection.send(content: content, completion: .contentProcessed({ (sendError) in
                     if let sendError = sendError {
                         print(sendError)
                         return
                     }
-                    if isDone {
-                        print("context is done");
-                        connection.cancel()
-                    }
                 }))
+            } else if let context = context, context.isFinal, isComplete {
+                print("context is done and no content: closing..")
+                connection.cancel()
+                return
             }
 
             if let error = error {
                 print(error)
+                connection.cancel()
                 return
             }
             
-            if isDone {
-                return
-            }
-            
+            print("continue to read")
             self.pipe(connection)
         }
         

@@ -17,19 +17,19 @@ class ConfigService: JsService {
     }
     
     @objc func load(_ req: JsRequest) {
-        
+        req.callback(Config.shared.load())
     }
     
     @objc func get(_ req: JsRequest) {
-        
+        req.callback(Config.shared.get(key: req.strParam("key")))
     }
     
     @objc func set(_ req: JsRequest) {
-        
+        Config.shared.set(key: req.strParam("key"), value: req.params["value"])
     }
     
     @objc func flush(_ req: JsRequest) {
-        
+        Config.shared.flush()
     }
     
 }

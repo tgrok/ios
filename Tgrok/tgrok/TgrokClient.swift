@@ -15,11 +15,14 @@ class TgrokClient: BaseClient {
     var paused = false
     
     override func start() {
-        connection = NWConnection(host: self.host, port: self.port, using: .tls)
-        super.start()
-        if (nil == connection) {
-            return
+        if nil == connection {
+            connection = NWConnection(host: self.host, port: self.port, using: .tls)
         }
+        super.start()
+    }
+    
+    override func onReady() {
+        super.onReady()
         readLoop()
     }
     
@@ -54,7 +57,7 @@ class TgrokClient: BaseClient {
             
             if let content = content {
                 let data = String(data: content, encoding: .utf8)
-                self.log("recv <<< " + data!)
+                self.log("recv <<<< " + data!)
                 self.onData(JSON(parseJSON: data!))
             }
             if let context = context, context.isFinal, isComplete  {

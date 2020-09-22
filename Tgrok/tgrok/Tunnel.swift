@@ -58,26 +58,15 @@ class Tunnel: NSObject {
             ],
         ])
     }
-//
-//    init(id: String, hostname: String, subdomain: String, proto: String, lhost: String, lport: UInt16, rport: UInt16) {
-//        self.id = id
-//        self.hostname = hostname
-//        self.subdomain = subdomain
-//        self.proto = proto
-//        self.localHost = lhost
-//        self.localPort = lport
-//        self.remotePort = rport
-//        super.init()
-//    }
     
     init(_ config: JSON) {
         self.id = config["id"].stringValue
         self.hostname = config["hostname"].stringValue
         self.subdomain = config["subdomain"].stringValue
         self.proto = config["protocol"].stringValue
-        self.localHost = config["lhost"].stringValue
-        self.localPort = config["lport"].uInt16Value
-        self.remotePort = config["rport"].uInt16Value
+        self.localHost = config["localHost"].stringValue
+        self.localPort = config["localPort"].uInt16Value
+        self.remotePort = 0
         super.init()
     }
     

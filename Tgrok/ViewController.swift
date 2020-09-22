@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import SwiftyJSON
 
 class ViewController: UIViewController {
     
@@ -18,11 +19,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webView = WKWebView(frame: CGRect.zero, configuration: webViewConfig())
+        webView = WKWebView(frame: webViewRect(), configuration: webViewConfig())
         webView.navigationDelegate = self
         installBridge(webView)
         
-        self.view = webView
+        self.view.addSubview(webView)
         
         // Uncomment this if you need to debug gui
         // urlHome = "http://127.0.0.1:8080/"
@@ -30,6 +31,15 @@ class ViewController: UIViewController {
         if nil != urlHome {
             loadRequest(urlHome)
         }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    func webViewRect() -> CGRect {
+        let height = UIDevice.headerHeight()
+        return CGRect(x: 0, y: -height, width: view.bounds.size.width, height: view.bounds.size.height + height)
     }
 
     func webViewConfig() -> WKWebViewConfiguration {
@@ -60,6 +70,34 @@ class ViewController: UIViewController {
         }
         
         webView.load(URLRequest(url: url))
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: .tgrok, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIDevice.orientationDidChangeNotification, object: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(rotated), name: UIDevice.orientationDidChangeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onTgrokEvent(_:)), name: .tgrok, object: nil)
+    }
+    
+    @objc func rotated() {
+        Timer.scheduledTimer(withTimeInterval: 0.3, repeats: false) { (_) in
+            self.webView.frame = self.webViewRect()
+        }
+    }
+    
+    @objc func onTgrokEvent(_ notification: Notification) {
+        let json = notification.object as! JSON
+        let format = "Drmer.events.emit('%@', %@);"
+        let js = String(format: format, "tgrok", json.desc)
+        // print(js)
+        webView.evaluateJavaScript(js, completionHandler: nil)
     }
 }
 

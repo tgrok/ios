@@ -42,34 +42,37 @@ class BaseClient: NSObject {
         }
         connection.start(queue: tgrokQueue)
         connection.stateUpdateHandler = { (newState) in
-            if self.type == "prx" {
-                print(newState)
-            }
-            switch newState {
-            case .ready:
-                self.onReady()
-                break
-            case .waiting(let error):
-                self.onWaiting(error)
-                break
-            case .cancelled:
-                self.onCancelled()
-                break
-            case .failed(let error):
-                self.onFailed(error)
-                break
-            case .setup:
-                self.onSetup()
-                break
-            case .preparing:
-                self.log("perparing")
-                break;
-            default:
-                print("unhandled state", newState)
-            }
+            self.onStateUpdate(newState)
         }
     }
     
+    func onStateUpdate(_ newState: NWConnection.State) {
+        switch newState {
+        case .ready:
+            self.onReady()
+            break
+        case .waiting(let error):
+            self.onWaiting(error)
+            self.onError(error)
+            break
+        case .cancelled:
+            self.onCancelled()
+            self.onError(nil)
+            break
+        case .failed(let error):
+            self.onFailed(error)
+            self.onError(error)
+            break
+        case .setup:
+            self.onSetup()
+            break
+        case .preparing:
+            self.log("perparing")
+            break;
+        default:
+            print("unhandled state", newState)
+        }
+    }
     
     func onReady() {
         log("on ready")
@@ -86,6 +89,13 @@ class BaseClient: NSObject {
     func onFailed(_ error: Error) {
         log("on failed")
         print(error)
+    }
+    
+    func onError(_ error: Error?) {
+        log("on error")
+        if let error = error {
+            print(error)
+        }
     }
     
     func onSetup() {
