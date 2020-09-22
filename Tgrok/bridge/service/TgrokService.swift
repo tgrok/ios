@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class TgrokService: JsService {
     
@@ -17,23 +18,32 @@ class TgrokService: JsService {
     }
 
     @objc func reconnect(_ req: JsRequest) {
-        
+        req.callback(true)
     }
     
     @objc func open(_ req: JsRequest) {
-        
+        let id = req.strParam("id")
+        let tunnels = Config.shared.get(key: "tunnels") as! JSON
+        for tunnel in tunnels.arrayValue {
+            if tunnel["id"].stringValue == id {
+                tgrok.openTunnel(Tunnel(tunnel))
+                req.callback(true)
+                return
+            }
+        }
+        req.callback(false)
     }
     
     @objc func close(_ req: JsRequest) {
-        
+        req.callback(tgrok.closeTunnel(req.strParam("id")))
     }
     
     @objc func remove(_ req: JsRequest) {
-        
+        req.callback(tgrok.removeTunnel(req.strParam("id")))
     }
     
     @objc func status(_ req: JsRequest) {
-        
+        req.callback(tgrok.status())
     }
     
 }

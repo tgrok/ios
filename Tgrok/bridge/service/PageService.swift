@@ -8,8 +8,15 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
 
 class PageService: JsService {
+    
+    @objc func config(_ req: JsRequest) {
+        req.callback([
+            "header": UIDevice.headerHeight()
+        ])
+    }
     
     @objc func external(_ req: JsRequest) {
         guard let url = URL(string: req.strParam("url")) else {

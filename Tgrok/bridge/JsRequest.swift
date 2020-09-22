@@ -55,6 +55,11 @@ class JsRequest: NSObject {
     func callback(_ result: JSON) {
         self.callback(result.description)
     }
+    
+    func callback(_ result: Any?) {
+        guard let result = result else { return self.callback("null") }
+        self.callback(JSON(result))
+    }
 
     func intParam(_ key: String) -> Int {
         return self.params[key].intValue

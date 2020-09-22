@@ -12,9 +12,18 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // clean up config
+        // UserDefaults.standard.removeObject(forKey: "tgrok")
+        
+        // start tgrok
+        DispatchQueue.main.async {
+            tgrok.start([])
+        }
+        
         return true
     }
 
